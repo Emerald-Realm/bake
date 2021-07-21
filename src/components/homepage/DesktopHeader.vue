@@ -7,8 +7,8 @@
     <!-- Second Navigation Row -->
     <div class="second-row">
       <ul class="navbar" v-if="navShows">
-        <a href="#home" @click="scrollToTop()" class="nav-link">
-          <li>Home</li>
+        <a href="#home" class="nav-link">
+          <li @click="scrollToTop">Home</li>
         </a>
         <a href="#service" class="nav-link">
           <li>Service</li>
@@ -54,15 +54,8 @@ export default {
     };
   },
   methods: {
-    scrollToTop() {
-      // window.scrollTo(0, 0);
-      // window.scroll({
-      //   top:0,
-      //   left:0,
-      //   behavior: 'smooth'
-      // })
-      document.documentElement.scrollTop = 0;
-      console.log('fails')
+   scrollToTop() {
+      window.scrollTo(0, 0);
     },
     // manipulate menu fall
     handleMenuFall() {
